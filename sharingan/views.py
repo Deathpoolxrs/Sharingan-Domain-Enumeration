@@ -25,5 +25,5 @@ def errorpage(request):
 
 
 def subdomain(url):
-    return print(url)
+    return print(urls)
     
