@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load   static %}
+{% block home %}active{% endblock  %}
+<!--container with form-->
+
+
+{% block content %}
+<div class="content">
+<form action="result" method="POST">
+     {% csrf_token %}
+  <div class="input-group ">
+  <span class="input-group-text text-light bg-dark px-4 py-3 " for="domain">Domain Name</span>
+  <input type="url" Name="domain" id="domain" aria-label="First name" class="form-control px-4 py-3 me-3" Placeholder="https://sharingan.com" pattern="https://.*" size="30"
+       required>
+  </div>
+  <div>
+  <button type="submit" class="btn btn-dark mt-4 px-5 py-3">Submit</button>
+  </div>
+</form>
+</div>
+{% endblock %}
