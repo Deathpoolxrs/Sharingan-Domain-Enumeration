@@ -1,10 +1,13 @@
 {% extends 'base.html'%}
-{% load  static %}
 {% block content %}
 
 <div class="content">
+{%for item in urls%}
+<li>{{item}}</li>
+{% endfor %}
+</div>
+<div>
 
-{{domainname}}
 </div>
 
 

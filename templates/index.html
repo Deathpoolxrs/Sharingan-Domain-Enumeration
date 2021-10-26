@@ -6,13 +6,11 @@
 
 {% block content %}
 <div class="content">
-<form action="result" method="POST">
+<form action="result" method="POST" enctype="multipart/form-data">
      {% csrf_token %}
-  <div class="input-group ">
-  <span class="input-group-text text-light bg-dark px-4 py-3 " for="domain">Domain Name</span>
-  <input type="url" Name="domain" id="domain" aria-label="First name" class="form-control px-4 py-3 me-3" Placeholder="https://sharingan.com" pattern="https://.*" size="30"
-       required>
-  </div>
+  <div class="input-group mb-3">
+  <span class="input-group-text text-light bg-dark px-3 py-2 " for="domain">Subdomain File</span> 
+  <input class="form-control" name="domainfile" type="file" id="formFile">  </div>
   <div>
   <button type="submit" class="btn btn-dark mt-4 px-5 py-3">Submit</button>
   </div>
